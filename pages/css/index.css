@@ -1,15 +1,8 @@
-/* Global reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 /* Body styling */
 body {
   font-family: 'Courier New', monospace;
-  background-color: #0a0a0a;
-  color: #00ff9f;
+  background-color: #121212; /* softer than pure black */
+  color: #e0ffe0; /* light greenish text for readability */
   line-height: 1.6;
   display: flex;
   flex-direction: column;
@@ -19,8 +12,8 @@ body {
 
 /* Headings */
 h1, h2 {
-  color: #ff00ff;
-  text-shadow: 0 0 8px #ff00ff, 0 0 16px #00ff9f;
+  color: #00ffaa;
+  text-shadow: 0 0 6px #00ffaa;
   margin-bottom: 1rem;
 }
 
@@ -34,34 +27,35 @@ h1, h2 {
 
 .flexbox-item a {
   text-decoration: none;
-  color: #00ff9f;
+  color: #ff66ff;
   font-weight: bold;
   transition: color 0.3s, text-shadow 0.3s;
 }
 
 .flexbox-item a:hover {
-  color: #ff00ff;
-  text-shadow: 0 0 8px #ff00ff, 0 0 16px #00ff9f;
+  color: #00ffaa;
+  text-shadow: 0 0 6px #00ffaa;
 }
 
 /* Content area */
 .content {
   max-width: 800px;
-  background: rgba(20, 20, 20, 0.9);
-  border: 2px solid #00ff9f;
+  background: rgba(30, 30, 30, 0.95); /* dark gray box */
+  border: 1px solid #00ffaa;
   border-radius: 8px;
   padding: 2rem;
-  box-shadow: 0 0 20px #00ff9f;
+  box-shadow: 0 0 12px #00ffaa;
 }
 
 /* Paragraphs */
 p {
   margin-bottom: 1rem;
+  color: #f0f0f0; /* softer white for readability */
 }
 
-/* Axis lines (retro grid aesthetic) */
+/* Axis lines */
 .axis {
   height: 2px;
-  background: linear-gradient(90deg, #00ff9f, #ff00ff);
+  background: linear-gradient(90deg, #00ffaa, #ff66ff);
   margin: 0.5rem 0;
 }
