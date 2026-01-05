@@ -1,51 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About me</title>
     <link rel="stylesheet" href="/pages/css/index.css">
     <link rel="icon" href="/pages/img/Post_him.jpg">
+    <!-- javascript -->
+    <script src="https://unpkg.com/three@0.164.0/build/three.min.js"></script>
+    <script src="./js/main.js"></script>
 </head>
-    <div class="content">
-        <body class="flexbox">
-            <div class="flexbox-container">
-                <div class="flexbox-logo">
-                    <h2>About Me - Robin Phadungkwan</h2>
-                </div>
-                <div class= "flexbox-item flexbox-home"><a href="/">Home</a></div>
-                <div class= "flexbox-item flexbox-projects"><a href="projects.html">Projects</a></div>
-                <div class="flexbox-item flexbox-about"><a href="aboutme.html">About Me</a></div>
-                <div class="flexbox-item flexbox-contact"><a href="contact.html">Contact</a></div>
-                <div class="axis main-axis"></div>
-                <div class="axis cross-axis"></div>
-            </div>
-        </body>
-        <h1>Welcome</h1>
-        <h2>My name is Robin Phadungkwan</h2>
-        <p>I'm a creative technologist with a background in engineering and network security.</p>
-        <p>Currently, I'm following a education in cyber security in Amsterdam.</p>
-        <p>thank you for checking out my portfolio. if you really enjoy the content, feel free to reach out!</p>
-        
-        <h2>My Interests</h2>
-        <p>in my free time i enjoy a lot of different things, ranging from longboarding to engineering small projects to make life a lot simpler.</p>
-        <p>i also enjoy learning about cyber security and ethical hacking, as well as tinkering with iot devices and linux systems.</p>
-        <h3>Tryhackme ranking</h3>
-        <p>i am currently ranked #187 globally on tryhackme, a platform to learn and practice cyber security skills.</p>
-        <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=2488927" style='border:none;'></iframe>
-        
-        <h2>skills</h2>
-        <ul>
-            <li>HTML/CSS</li>
-            <li>Python</li>
-            <li>C++</li>
-            <li>Network Security</li>
-            <li>Problem Solving</li>
-            <li>Creative Thinking</li>
-            <li>ethical hacking</li>
-            <li>linux</li>
-            <li>IOT devices</li>
-            <li>fusion 360</li>
-        </ul>
-    </body>
+<body class="flexbox">
+    <!-- HEADER / NAVIGATION -->
+    <header class="site-header">
+        <h1 data-glitch="About Me">About Me</h1>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="aboutme.html">About Me</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+        <section>
+            <h1>Welcome</h1>
+            <h2>My name is Robin Phadungkwan</h2>
+
+            <p>I'm a creative technologist with a background in engineering and network security.</p>
+            <p>Currently, I'm following an education in cyber security in Amsterdam.</p>
+            <p>Thank you for checking out my portfolio. If you enjoy the content, feel free to reach out!</p>
+
+            <h2>My Interests</h2>
+            <p>In my free time I enjoy longboarding, engineering small projects, and making life simpler.</p>
+            <p>I also enjoy learning about cyber security, ethical hacking, tinkering with IoT devices and Linux systems.</p>
+
+            <h3>TryHackMe Ranking</h3>
+            <p>I am currently in the top 5 globally on TryHackMe.</p>
+            <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=2488927"
+                    style="border:none; width: 100%; height: 100px;">
+            </iframe>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML/CSS</li>
+                <li>Python</li>
+                <li>C++</li>
+                <li>Network Security</li>
+                <li>Problem Solving</li>
+                <li>Creative Thinking</li>
+                <li>Ethical Hacking</li>
+                <li>Linux</li>
+                <li>IoT Devices</li>
+                <li>Fusion 360</li>
+            </ul>
+        </section>
+    </main>
+    <!-- SCRIPTS -->
+</body>
 </html>

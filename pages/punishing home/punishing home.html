@@ -6,48 +6,105 @@
     <title>The Punishing Home</title>
     <link rel="stylesheet" href="/pages/css/index.css">
     <link rel="icon" href="/pages/img/Post_him.jpg">
+    <script src="https://unpkg.com/three@0.164.0/build/three.min.js"></script>
+    <script src="./js/main.js"></script>
 </head>
-<body>
-    <div class="content">
-        <body class="flexbox">
-            <div class="flexbox-container">
-                <div class="flexbox-logo">
-                    <h2>Portfolio Robin Phadungkwan</h2>
-                </div>
-                <div class= "flexbox-item flexbox-home"><a href="/">Home</a></div>
-                <div class= "flexbox-item flexbox-projects"><a href="/pages/projects.html">Projects</a></div>
-                <div class="flexbox-item flexbox-about"><a href="/pages/aboutme.html">About Me</a></div>
-                <div class="flexbox-item flexbox-contact"><a href="/pages/contact.html">Contact</a></div>
-                <div class="axis main-axis"></div>
-                <div class="axis cross-axis"></div>
-            </div>
-        </body>
-        <h1>The Punishing Home(Draft)</h1>
-        <img src="./img/voorbeeld bob met tekst.png" alt="voorbeeld bob met tekst" height="400px">
-        <h2>Brief</h2>
-        <p>A smart home system that tries to do the right thing, but is more a nuisance than a help.</p>
-        <h2>Description</h2>
-        <p>The punishing home is a smart home project that aims to see people how much they rely on technology for their daily lives. in this project we made a smart home system that tries to give the ideal environment, but annoys the person and gets in their way.</p>
-        <p>the project is build from the ground up and is a amalgamation of various technologies including sensors, actuators, machine learning, speech to text and python.</p>
-        <p>I made the code for the text to speech system, research which was used in the project, together with a colleague the face for the product and research.</p>
-        <h2>Year</h2>
-        <p>September 2025 - January 2026</p>
-        <h2>Tags</h2>
-        <h2>Context</h2>
-        <p>For the studio named Dark Tech we got the assignment named Smart Home: Punishing Home, this meant we had to make a product that simulates a smart home setting. but we had to look at how much damage it would cause if, the home system wouldn't help you but force you to listen to his commands or else it would sabotage you. </p>
-        <h2>Role/Tasks</h2>
-        <ul>
-            <li>Researching useful tts for project</li>
-            <li>Text to speech coding</li>
-            <li>Coding for face smart home</li>
-            <li>Researching media for face</li>
-            <li>Documentation</li>
-        </ul>
-        <h2>Images</h2>
-        <img src="./img/documentation.png" alt="documentation" height="500px">
-        <img src="./img/Face.png" alt="inspiration" height="600px">
-        <img src="./img/tts choices.png" alt="tts choices" height="400px">
+<body class="flexbox">
 
-    </div>     
+    <header class="site-header">
+        <h1 data-glitch="The Punishing Home">The Punishing Home</h1>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="aboutme.html">About Me</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main class="content">
+        <section id="punishing-home">
+            <h1>The Punishing Home(Draft)</h1>
+            <div class="slideshow">
+            <div class="slide fade">
+                <img src="./img/voorbeeld bob met tekst.png" alt="voorbeeld bob met tekst">
+            </div>
+            <div class="slide fade">
+                <img src="./img/documentation.png" alt="documentation">
+            </div>
+            <div class="slide fade">
+                <img src="./img/Face.png" alt="Inspiration">
+            </div>
+            <div class="slide fade">
+                <img src="./img/tts choices.png" alt="tts choices">
+            </div>
+
+            <!-- Glitch Arrows --> 
+             <a class="prev" onclick="plusSlides(-1)">&#10094;</a> 
+             <a class="next" onclick="plusSlides(1)">&#10095;</a> 
+             <!-- Dots --> 
+              <div class="dots"> 
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div> 
+        </div>
+            <h2>Brief</h2>
+            <p>A smart home system that tries to do the right thing, but is more a nuisance than a help.</p>
+            <h2>Description</h2>
+            <p>The punishing home is a smart home project that aims to see people how much they rely on technology for their daily lives. in this project we made a smart home system that tries to give the ideal environment, but annoys the person and gets in their way.</p>
+            <p>the project is build from the ground up and is a amalgamation of various technologies including sensors, actuators, machine learning, speech to text and python.</p>
+            <p>I made the code for the text to speech system, research which was used in the project, together with a colleague the face for the product and research.</p>
+            <h2>Year</h2>
+            <p>September 2025 - January 2026</p>
+            <h2>Tags</h2>
+            <p>Python, Smart Home, Text to Speech, Machine Learning, Sensors, Actuators</p>
+            <h2>Context</h2>
+            <p>For the studio named Dark Tech we got the assignment named Smart Home: Punishing Home, this meant we had to make a product that simulates a smart home setting. but we had to look at how much damage it would cause if, the home system wouldn't help you but force you to listen to his commands or else it would sabotage you. </p>
+            <h2>Role/Tasks</h2>
+            <ul>
+                <li>Researching useful tts for project</li>
+                <li>Text to speech coding</li>
+                <li>Coding for face smart home</li>
+                <li>Researching media for face</li>
+                <li>Documentation</li>
+            </ul>
+        </section>
+
+    </main>  
+    
+   <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// Dot controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("slide");
+    let dots = document.getElementsByClassName("dot");
+
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    for (i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].classList.add("active");
+}
+</script>     
 </body>
 </html>
